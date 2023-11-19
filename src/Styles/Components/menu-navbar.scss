@@ -1,0 +1,23 @@
+.navbar {
+    padding: 0 10%;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    background: linear-gradient(
+        90deg,
+        rgba(227, 240, 240, 1) 0%,
+        #2BAEF7A3 100%
+    );
+
+    .navbar-end {
+        gap: 40px;
+
+        .navbar-item {
+            text-transform: capitalize;
+        
+            &:hover{
+                color: black !important;
+            }
+        }
+    }
+}
