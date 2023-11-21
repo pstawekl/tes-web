@@ -5,6 +5,11 @@
 
     .tile.is-parent {
         animation: fadeIn 1s ease-in-out forwards;
+        transition: 0.7s;
+
+        &:hover {
+            transform: scale3d(1.05, 1.05, 1.05);
+        }
     }
 
     .left {
