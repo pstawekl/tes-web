@@ -2,6 +2,7 @@ import individualToClients from './../Images/individual-approach-to-client.webp'
 import alwaysOnTime from './../Images/always-on-time.webp';
 import perfectBalance from './../Images/perfect-balance.webp';
 import justOneCallAway from './../Images/just-one-call-away.webp';
+import Map from '../Components/Map';
 
 export default function Home() {
     const TAGNAME = "tes-home";
@@ -35,7 +36,7 @@ export default function Home() {
     ]
 
     return (
-        <div className={TAGNAME}>
+        <div className={TAGNAME + " is-unselectable"}>
             <div className={TAGNAME + "__banner"}>
                 <h1 className="title is-size-1 has-text-info">TES</h1>
                 <p className="subtitle">TWOJE BIURO RACHUNKOWE</p>
@@ -57,7 +58,7 @@ export default function Home() {
                     descriptionItems.map((item, index) => {
                         if (item.side == "left") {
                             return (
-                                <div className={TAGNAME + "__description-item-container"}>
+                                <div className={TAGNAME + "__description-item-container left"}>
                                     <div className={TAGNAME + "__description-item"} key={index}>
                                         <div className={TAGNAME + "__description-item-left pr-5"}>
                                             <h1 className="title is-size-3 has-text-info">{item.title}</h1>
@@ -72,7 +73,7 @@ export default function Home() {
                             )
                         } else {
                             return (
-                                <div className={TAGNAME + "__description-item-container"}>
+                                <div className={TAGNAME + "__description-item-container right"}>
                                     <div className={TAGNAME + "__description-item"} key={index}>
                                         <div className={TAGNAME + "__description-item-left pr-5"}>
                                             <img src={item.image} alt={item.title} />
@@ -99,6 +100,9 @@ export default function Home() {
                         Obsługujemy firmy z terenu Zduńskiej Woli i okolic. Na życzenie Klienta odbieramy dokumenty z jego siedziby.
                     </p>
                 </div>
+            </div>
+            <div className={TAGNAME + "__map"}>
+                <Map />
             </div>
         </div>
     );

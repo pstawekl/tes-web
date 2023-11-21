@@ -1,5 +1,17 @@
 .tes-about {
+    &__header {
+        animation: slideFromLeft 1s ease-in-out;
+    }
+
     .tile.is-parent {
         animation: fadeIn 1s ease-in-out forwards;
+    }
+
+    .left {
+        animation: slideFromLeft 1.5s ease-in-out;
+    }
+
+    .right {
+        animation: slideFromRight 1.5s ease-in-out;
     }
 }

@@ -50,8 +50,8 @@ export default function About() {
                 aboutItems.map((item, index) => {
                     if (item.side === "left") {
                         return (
-                            <div className="tile is-ancestor">
-                                <div className="tile is-vertical is-8">
+                            <div className="tile is-ancestor left">
+                                <div className="tile is-vertical ">
                                     <div className="tile is-parent">
                                         <article className="tile is-child notification is-info">
                                             <p className="title">{item.title}</p>
@@ -61,7 +61,7 @@ export default function About() {
                                         </article>
                                     </div>
                                 </div>
-                                <div className="tile is-parent">
+                                {/* <div className="tile is-parent left">
                                     <article className="tile is-child notification is-info">
                                         <div className="content">
                                             <figure className="image ">
@@ -69,13 +69,13 @@ export default function About() {
                                             </figure>
                                         </div>
                                     </article>
-                                </div>
+                                </div> */}
                             </div>
                         )
                     } else {
                         return (
-                            <div className="tile is-ancestor">
-                                <div className="tile is-parent">
+                            <div className="tile is-ancestor right">
+                                {/* <div className="tile is-parent">
                                     <article className="tile is-child notification is-info">
                                         <div className="content">
                                             <figure className="image">
@@ -83,10 +83,10 @@ export default function About() {
                                             </figure>
                                         </div>
                                     </article>
-                                </div>
-                                <div className="tile is-vertical is-8">
+                                </div> */}
+                                <div className="tile is-vertical right">
                                     <div className="tile is-parent">
-                                        <article className="tile is-child notification is-info">
+                                        <article className="tile is-child notification is-light">
                                             <p className="title">{item.title}</p>
                                             <p className="subtitle">{item.subtitle}</p>
                                             <div className="content">

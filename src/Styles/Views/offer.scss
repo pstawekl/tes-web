@@ -1,3 +1,47 @@
 .tes-offer {
-    
+    &-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url("../../Images/offer.webp");
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        width: 100%;    
+        animation: slideFromTop 1s forwards;
+
+        @include desktop {
+            height: 300px;
+        }
+
+        @include mobile {
+            display: none;
+        }
+
+        .title {
+            animation: slideFromTop 1.5s forwards;
+            backdrop-filter: blur(5px);
+        }
+    }
+
+    &-subtitle {
+        animation: slideFromLeft 1s ease-in-out;
+        background: linear-gradient(
+            90deg,
+            #2BAEF7A3 0%,
+            rgba(227, 240, 240, 1) 100%,
+        );
+
+        p {
+            animation: slideFromLeft 1.5s ease-in-out;
+        }
+    }
+
+    &-content {
+        animation: slideFromBottom 1s ease-in-out;
+
+        p {
+            animation: slideFromBottom 1.5s ease-in-out;
+        }
+    }
 }
