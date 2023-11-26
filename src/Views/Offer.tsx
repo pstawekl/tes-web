@@ -1,18 +1,18 @@
 export default function Offer() {
-    const TAGNAME = "tes-offer";
+    const VIEWLAYOUTTAG = "tes-view-layout";
 
     return (
-        <section className={TAGNAME + " section is-fluid mt-1 mb-0 pb-0 px-0 mx-0"}>
+        <section className={VIEWLAYOUTTAG + " tes-offer section is-fluid mt-1 mb-0 pb-0 px-0 mx-0"}>
             <div className="container is-fluid px-0">
-                <div className={TAGNAME + "-title"}>
+                <div className={VIEWLAYOUTTAG + "-title"}>
                     <h1 className="title has-text-white is-size-1 py-5 px-6">Oferta</h1>
                 </div>
-                <div className={"hero is-small is-fluid "+ TAGNAME+ "-subtitle"}>
+                <div className={VIEWLAYOUTTAG + "-subtitle hero is-small is-fluid"}>
                     <div className="hero-body">
                         <p className="title has-text-white">Oferujemy pełen zakres usług księgowych dla:</p>
                     </div>
                 </div>
-                <div className={"hero is-info is-fluid " + TAGNAME + "-content"}>
+                <div className={VIEWLAYOUTTAG + "-content hero is-info is-fluid"}>
                     <div className="hero-body">
                         <p className="content about-list is-size-4">
                             <ul className="my-0">

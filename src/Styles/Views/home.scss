@@ -1,4 +1,4 @@
-@import '../variables.scss';
+@import "../variables.scss";
 
 .tes-home {
     display: flex;
@@ -17,7 +17,12 @@
         padding-right: 20%;
         animation: slideFromTop 1s ease-in-out forwards;
 
-        .title, .subtitle, span, h1, p, button {
+        .title,
+        .subtitle,
+        span,
+        h1,
+        p,
+        button {
             animation: slideFromBottom 2s ease-in-out forwards;
         }
 
@@ -56,7 +61,6 @@
             flex-wrap: wrap;
             padding-left: 20% !important;
             padding-right: 20% !important;
-
 
             &-item-container {
                 display: flex;

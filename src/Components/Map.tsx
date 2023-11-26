@@ -7,7 +7,7 @@ import icon from 'leaflet/dist/images/marker-icon.png';
 import iconShadow from 'leaflet/dist/images/marker-shadow.png';
 
 const Map = () => {
-  const position = [51.601839, 18.942589]; 
+  const position = [51.601839, 18.942589];
   const zoom = 20;
 
   return (
@@ -16,7 +16,7 @@ const Map = () => {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       />
-      <Marker position={position as LatLngExpression} icon={L.icon({iconUrl: icon, shadowUrl: iconShadow})}>
+      <Marker position={position as LatLngExpression} icon={L.icon({ iconUrl: icon, shadowUrl: iconShadow })}>
         <Popup>
           Tutaj jest nasze biuro!
         </Popup>

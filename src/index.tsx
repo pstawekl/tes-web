@@ -1,13 +1,14 @@
 import './Styles/style.scss';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
-import Home from './Views/Home';
-import About from './Views/About';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import MenuNavbar from './Components/MenuNavbar';
 import Footer from './Components/Footer';
+import Home from './Views/Home';
+import About from './Views/About';
 import Offer from './Views/Offer';
+import Certificates from './Views/Certificates';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -20,6 +21,7 @@ root.render(
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/offer" element={<Offer />} />
+        <Route path="/certificates" element={<Certificates />} />
       </Routes>
     </BrowserRouter>
     <Footer />

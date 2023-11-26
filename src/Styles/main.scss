@@ -1,10 +1,12 @@
 //Views
-@import './Views/home.scss';
-@import './Views/about.scss';
-@import './Views/offer.scss';
+@import "./Views/home.scss";
+@import "./Views/about.scss";
+@import "./Views/offer.scss";
+@import "./Views/certificates.scss";
 
 //Components
-@import './Components/menu-navbar.scss';
+@import "./Components/menu-navbar.scss";
+@import "./Components/view-layout.scss";
 
-@import './key-frames.scss';
-@import './variables.scss';
+@import "./key-frames.scss";
+@import "./variables.scss";
