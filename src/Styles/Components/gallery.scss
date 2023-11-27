@@ -1,0 +1,21 @@
+.gallery {
+    padding: 0 10%;
+    .column.is-4 {
+        .card {
+            .card-image {
+                transition: 0.7s;
+
+                &:hover {
+                    cursor: pointer;
+                    transform: scale3d(1.05, 1.05, 1.05);
+                    filter: brightness(0.5);
+                }
+            }
+        }
+    }
+}
+
+.yarl__navigation_next,
+.yarl__navigation_prev {
+    display: none !important;
+}

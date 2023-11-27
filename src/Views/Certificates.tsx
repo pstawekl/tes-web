@@ -1,25 +1,34 @@
-import { Gallery, GalleryImage, certificateType } from "../Components/Gallery";
+import Gallery, { GalleryImage, certificateType } from "../Components/Gallery";
 
 export default function Certificates() {
     const VIEWLAYOUTTAG = "tes-view-layout";
     const slideImages: GalleryImage[] = [
         {
-            url: 'http://r-biuro.pl/assets/images/team-img4.png',
+            src: 'http://r-biuro.pl/assets/images/team-img4.png',
             name: 'Księgowy Bilansista KB 15/09/S',
             certType: certificateType.KURS,
-            description: 'Celem kursu było przygotowanie do zawodu samodzielnego księgowego'
+            description: 'Celem kursu było przygotowanie do zawodu samodzielnego księgowego',
+            width: 3,
+            height: 4,
+            index: 1
         },
         {
-            url: 'http://r-biuro.pl/assets/images/team-img3.png',
+            src: 'http://r-biuro.pl/assets/images/team-img3.png',
             name: 'Główny Księgowy',
             certType: certificateType.KURS,
-            description: 'Główny księgowy to osoba odpowiedzialna za prowadzenie rachunkowości w przedsiębiorstwie. Zazwyczaj główny księgowy jest zwierzchnikiem pozostałych księgowych w przedsiębiorstwie.'
+            description: 'Główny księgowy to osoba odpowiedzialna za prowadzenie rachunkowości w przedsiębiorstwie. Zazwyczaj główny księgowy jest zwierzchnikiem pozostałych księgowych w przedsiębiorstwie.',
+            width: 3,
+            height: 4,
+            index: 2
         },
         {
-            url: 'http://r-biuro.pl/assets/images/team-img2.png',
+            src: 'http://r-biuro.pl/assets/images/team-img2.png',
             name: 'Usługowe prowadzenie ksiąg rachunkowych',
             certType: certificateType.CERTYFIKAT,
-            description: 'Certyfikat nadaje uprawnienia niezbędne do usługowego prowadzenia ksiąg rachunkowych'
+            description: 'Certyfikat nadaje uprawnienia niezbędne do usługowego prowadzenia ksiąg rachunkowych',
+            width: 3,
+            height: 4,
+            index: 3
         }
     ];
 
@@ -36,6 +45,16 @@ export default function Certificates() {
                 </div>
                 <div className={VIEWLAYOUTTAG + "-content hero is-info is-fluid"}>
                     <div className="hero-body">
+                        <div className="content">
+                            Nasze biuro posiada 3 certyfikaty, które uprawniają nas do usługowego prowadzenia ksiąg rachunkowych, prowadzenia rachunkowości oraz do wykonywania czynności biegłego rewidenta.
+                            Są to:
+                            <ul>
+                                <li>Certyfikat - Usługowe prowadzenie ksiąg handlowych - Certyfikat nadaje uprawnienia niezbędne do usługowego prowadzenia ksiąg rachunkowych</li>
+                                <li>Kurs - Główny Księgowy - Główny księgowy to osoba odpowiedzialna za prowadzenie rachunkowości w przedsiębiorstwie. Zazwyczaj główny księgowy jest zwierzchnikiem pozostałych księgowych w przedsiębiorstwie.</li>
+                                <li>Kurs - Księgowy Bilansista KB 15/09/S - Celem kursu było przygotowanie do zawodu samodzielnego księgowego.</li>
+                            </ul>
+                        </div>
+                        <div className="subtitle">Nasze certyfikaty:</div>
                         <Gallery galleryImages={slideImages} />
                     </div>
                 </div>

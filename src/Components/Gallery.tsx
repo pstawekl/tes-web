@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import Lightbox, { SlideImage } from "yet-another-react-lightbox";
-import Captions from "yet-another-react-lightbox/plugins/captions";
+import React, { useEffect, useState } from "react";
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/captions.css";
+import Lightbox from "yet-another-react-lightbox";
+import Captions from "yet-another-react-lightbox/plugins/captions";
 
 
 export interface GalleryProps {
@@ -16,33 +16,77 @@ export enum certificateType {
 }
 
 export type GalleryImage = {
-    url: string,
+    src: string,
     name: string,
     description: string,
     certType?: certificateType
+    width: number,
+    height: number,
+    index: number,
 };
 
-export function Gallery(props: GalleryProps) {
-    const [open, setOpen] = useState(false);
+export interface LightboxImage {
+    [name: string]: {
+        isOpen?: boolean,
+        index?: number,
+    }
+}
+
+export default function Gallery(props: GalleryProps) {
+    const [currentImage, setCurrentImage] = useState<number>(0);
+    const [viewerIsOpen, setViewerIsOpen] = useState<boolean>(false);
     const captionsRef = React.useRef(null);
-    let slideImages: SlideImage[] = [];
-    props.galleryImages.map((galleryImage) => {
-        slideImages.push({src: galleryImage.url, title: galleryImage.name, description: galleryImage.description});
-    });
+
+    const closeLightbox = () => {
+        setCurrentImage(0);
+        setViewerIsOpen(false);
+    };
+
+    useEffect(() => {
+        if (currentImage != 0) {
+            setViewerIsOpen(true);
+        }
+    }, [currentImage])
 
     return (
-        <div className="gallery">
-            <button type="button" onClick={() => setOpen(true)}>
-                Open Lightbox
-            </button>
-
-            <Lightbox
-                open={open}
-                close={() => setOpen(false)}
-                slides={slideImages}
-                plugins={[Captions]}
-                captions={{ ref: captionsRef }}
-            />
+        <div>
+            <div className="gallery" style={{display: 'flex'}}>
+                {
+                    props.galleryImages.map((image, index) => {
+                        return (
+                            <div className="column is-4" onClick={e => {
+                                e.preventDefault();
+                                setCurrentImage(image.index);}}>
+                                <div className="card">
+                                    <div className="card-image">
+                                        <figure className="image">
+                                            <img src={image.src} alt={image.name} />
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        )
+                    })
+                }
+            </div>
+            {
+                props.galleryImages.map((image, index) => {
+                    return (
+                        <Lightbox
+                        open={Boolean(image.index == currentImage && viewerIsOpen)}
+                        close={() => closeLightbox()}
+                        plugins={[Captions]}
+                        slides={[{
+                            src: image.src,
+                            title:image.name,
+                            description: image.description
+                        }]}
+                        captions={{ref: captionsRef}}
+                        noScroll={{disabled: true}}
+                        />
+                    )
+                }) 
+            }
         </div>
-    )
+    );
 }
