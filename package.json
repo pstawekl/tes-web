@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@bayer/ol-kit": "^0.11.0",
+    "@emailjs/browser": "^3.11.0",
     "@material-ui/core": "^4.12.4",
     "@material-ui/icons": "^4.11.3",
     "@material-ui/styles": "^4.11.5",
@@ -17,6 +18,8 @@
     "@types/react-google-recaptcha": "^2.1.8",
     "axios": "^1.6.2",
     "bulma": "^0.9.4",
+    "email-js": "^2.0.2",
+    "emailjs": "^4.0.3",
     "leaflet": "^1.9.4",
     "node": "^21.2.0",
     "ol": "^8.2.0",

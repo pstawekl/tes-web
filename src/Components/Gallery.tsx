@@ -43,7 +43,7 @@ export default function Gallery(props: GalleryProps) {
     };
 
     useEffect(() => {
-        if (currentImage != 0) {
+        if (currentImage !== 0) {
             setViewerIsOpen(true);
         }
     }, [currentImage])
@@ -73,7 +73,7 @@ export default function Gallery(props: GalleryProps) {
                 props.galleryImages.map((image, index) => {
                     return (
                         <Lightbox
-                        open={Boolean(image.index == currentImage && viewerIsOpen)}
+                        open={Boolean(image.index === currentImage && viewerIsOpen)}
                         close={() => closeLightbox()}
                         plugins={[Captions]}
                         slides={[{

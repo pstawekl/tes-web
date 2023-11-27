@@ -1,13 +1,21 @@
 import Gallery, { GalleryImage, certificateType } from "../Components/Gallery";
+import firstCert from './../Images/certificates/1.jpg';
+import secondCert from './../Images/certificates/2.jpg';
+import thirdCert from './../Images/certificates/3.jpg';
+import fourthCert from './../Images/certificates/4.jpg';
+import fifthCert from './../Images/certificates/5.jpg';
+import sixthCert from './../Images/certificates/6.jpg';
+import seventhCert from './../Images/certificates/7.jpg';
+import eighthCert from './../Images/certificates/8.jpg';
 
 export default function Certificates() {
     const VIEWLAYOUTTAG = "tes-view-layout";
     const slideImages: GalleryImage[] = [
         {
-            src: 'http://r-biuro.pl/assets/images/team-img4.png',
-            name: 'Księgowy Bilansista KB 15/09/S',
-            certType: certificateType.KURS,
-            description: 'Celem kursu było przygotowanie do zawodu samodzielnego księgowego',
+            src: firstCert,
+            name: 'Certyfikat Księgowy',
+            certType: certificateType.CERTYFIKAT,
+            description: 'Certyfikat potwierdzający kwalifikację oraz uprawniający do usługowe prowadzenia ksiąg rachunkowych',
             width: 3,
             height: 4,
             index: 1

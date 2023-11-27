@@ -1,0 +1,15 @@
+.tes-contact {
+    .tes-message {
+        &.is-hidden {
+            display: none;
+        }
+    }
+
+    .tes-submit-button {
+        cursor: pointer;
+        &.in-progress {
+            cursor: progress;
+        }   
+        
+    }
+}
