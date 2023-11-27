@@ -115,6 +115,7 @@ const Contact = () => {
                             />
                             <input type="hidden" name="fake_field" value={fake_field} onChange={e => setFakeField(e.target.value)} />
                         </form>
+                        {/* TODO - https://www.abstractapi.com/guides/react-send-email-from-your-app-without-a-backend */}
                     </div>
                 </div>
                 <div className={VIEWLAYOUTTAG + "-content is-info hero is-fluid"}>
