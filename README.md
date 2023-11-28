@@ -9,3 +9,5 @@ Aktualnie aplikacja ma służyć jako strona informacyjna, pozwalająca równie�
 ### Docelowy cel aplikacji
 
 Docelowym celem aplikacji jest utworzenie systemu pozwalającego klientom biura na szybkie i bezpieczne przesyłanie dokumentów, bez konieczności wizyty w biurze przez klienta oraz możliwość odbierania tych dokumentów i komunikacji z klientem w aplikacji przez księgowe w biurze.
+
+### Aktualny postęp prac nad aplikacją można sprawdzić na http://nowe.r-biuro.pl
