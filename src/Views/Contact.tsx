@@ -28,10 +28,10 @@ const Contact = () => {
         }
     }
 
-    function showAlert(title: string, message: string, messageType: string, isAlertVisible: boolean) {
+    function showAlert(title: string, message: string, messageType: string) {
         setAlertMessage({ title: title, message: message });
         setMessageType(messageType);
-        setIsAlertVisible(isAlertVisible);
+        setIsAlertVisible(true);
         toggleAlert();
     }
 
@@ -39,35 +39,35 @@ const Contact = () => {
         e.preventDefault()
         const submitButton = document.getElementsByClassName('tes-submit-button')[0];
         submitButton.setAttribute('disabled', 'true');
-        showAlert("Wysyłanie...", "Proszę czekać...", "is-warning", true);
+        showAlert("Wysyłanie...", "Proszę czekać...", "is-warning");
         
 
         if (name === '') {
-            showAlert("Błąd!", "Uzupełnij imię!", "is-danger", true)
+            showAlert("Błąd!", "Uzupełnij imię!", "is-danger")
             document.getElementsByClassName("form-name")[0].classList.add("is-danger");
             return
         }
 
         if (email === '') {
-            showAlert("Błąd!", "Uzupełnij email!", "is-danger", true)
+            showAlert("Błąd!", "Uzupełnij email!", "is-danger")
             setAlertMessage({ title: "Błąd!", message: "Uzupełnij email!" })
             document.getElementsByClassName("form-email")[0].classList.add("is-danger");
             return;
         }
 
         if (message === '') {
-            showAlert("Błąd!", "Uzupełnij wiadomość!", "is-danger", true)
+            showAlert("Błąd!", "Uzupełnij wiadomość!", "is-danger")
             document.getElementsByClassName("form-message")[0].classList.add("is-danger");
             return;
         }
 
         if (recaptcha === '') {
-            showAlert("Błąd!", "Potwierdź, że nie jesteś robotem!", "is-danger", true)
+            showAlert("Błąd!", "Potwierdź, że nie jesteś robotem!", "is-danger")
             return;
         }
 
         if (fake_field !== '') {
-            showAlert("Błąd!", "Nasz system wykrył, że jesteś robotem. Odśwież stronę i spróbuj jeszcze raz.", "is-danger", true)
+            showAlert("Błąd!", "Nasz system wykrył, że jesteś robotem. Odśwież stronę i spróbuj jeszcze raz.", "is-danger")
             return;
         }
         if (isVerified) {
@@ -88,11 +88,11 @@ const Contact = () => {
         e.preventDefault();
         emailjs.sendForm('tes.home.pl', 'template_gneuu7v', form.current as HTMLFormElement, 'NxNGNwjO1_jzc7ij8')
             .then((result) => {
-                showAlert("Sukces!", "Wiadomość została wysłana!", "is-success", true);
+                showAlert("Sukces!", "Wiadomość została wysłana!", "is-success");
                 setIsSubmited(true);
                 clearForm();
             }, (error) => {
-                showAlert("Błąd!", "Wystąpił błąd podczas wysyłania wiadomości!", "is-danger", true);
+                showAlert("Błąd!", "Wystąpił błąd podczas wysyłania wiadomości!", "is-danger");
             });
     };
 
