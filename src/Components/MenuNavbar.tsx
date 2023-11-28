@@ -1,4 +1,10 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { useEffect, useState } from "react"
+import { faEmpire, faFacebook, faFacebookF } from "@fortawesome/free-brands-svg-icons";
+import { faBars, faClose, faEnvelope, faHamburger, faPhone } from '@fortawesome/free-solid-svg-icons'
+
 export default function MenuNavbar() {
+    const [isContextOpen, setIsContextOpen] = useState(false)
     const menuItems = [
         {
             name: "Home",
@@ -22,6 +28,14 @@ export default function MenuNavbar() {
         }
     ]
 
+    useEffect(() =>{
+        if(isContextOpen){
+            document.getElementsByClassName('context-menu')[0].classList.add('is-active')
+        }else{
+            document.getElementsByClassName('context-menu')[0].classList.remove('is-active')
+        }
+    }, [isContextOpen])
+
     return (
         <nav className="navbar" role="navigation" aria-label="main navigation">
             <div className="navbar-brand">
@@ -29,11 +43,20 @@ export default function MenuNavbar() {
                     TES
                 </a>
 
-                <a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
+                <div role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" onClick={e => setIsContextOpen(!isContextOpen)}>
+                    {
+                        isContextOpen ? <FontAwesomeIcon icon={faClose} /> : <FontAwesomeIcon icon={faBars} />
+                    }
+                </div>
+                <div className="context-menu">
+                    {
+                        menuItems.map((item, index) => {
+                            return (
+                                <a className="navbar-item has-text-white" href={item.path} key={index}>{item.name}</a>
+                            )
+                        })
+                    }
+                </div>
             </div>
 
             <div id="navbarBasicExample" className="navbar-menu">
@@ -56,25 +79,3 @@ export default function MenuNavbar() {
         </nav>
     )
 }
-
-{/* <div className="navbar-item has-dropdown is-hoverable">
-                        <a className="navbar-link">
-                            More
-                        </a>
-
-                        <div className="navbar-dropdown">
-                            <a className="navbar-item">
-                                About
-                            </a>
-                            <a className="navbar-item">
-                                Jobs
-                            </a>
-                            <a className="navbar-item">
-                                Contact
-                            </a>
-                            <hr className="navbar-divider" />
-                            <a className="navbar-item">
-                                Report an issue
-                            </a>
-                        </div>
-                    </div> */}

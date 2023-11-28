@@ -1,0 +1,36 @@
+.scroll-button {
+    position: fixed;
+    width: 100%;
+    left: 96vw;
+    bottom: 80px;
+    height: 20px;
+    font-size: 3rem;
+    z-index: 100000;
+    cursor: pointer;
+
+    @include mobile {
+        left: 85vw;
+    }
+
+    @include tablet {
+        left: 90vw
+    }
+
+    &-icon {
+        animation: slideToBottom 1s ease-in-out forwards;
+        background: white;
+        border: 1px solid white;
+        border-radius: 50%;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.7s;
+        display: inline;
+
+        &:hover {
+            color: $color-primary-element;
+        }
+
+        &.slide-in {
+            animation: slideFromBottom 1s ease-in-out;
+        }
+    }
+}

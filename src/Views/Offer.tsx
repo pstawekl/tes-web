@@ -9,13 +9,21 @@ export default function Offer() {
                 </div>
                 <div className={VIEWLAYOUTTAG + "-subtitle hero is-small is-fluid"}>
                     <div className="hero-body">
-                        <p className="title has-text-white">Oferujemy pełen zakres usług księgowych dla:</p>
+                        <p className="title has-text-info">Oferujemy pełen zakres usług księgowych</p>
                     </div>
                 </div>
                 <div className={VIEWLAYOUTTAG + "-content hero is-info is-fluid"}>
                     <div className="hero-body">
-                        <p className="content about-list is-size-4">
-                            <ul className="my-0">
+                        <p className="content about-list is-size-5">
+                            Nasze biuro rachunkowe oferuje kompleksową obsługę księgową dla firm, obejmującą prowadzenie ksiąg, rozliczenia podatkowe oraz wsparcie w tworzeniu strategii finansowych. Zapewniając profesjonalizm, dokładność i terminowość, pomaga przedsiębiorstwom skupić się na rozwoju biznesu. 
+                        </p>
+                    </div>
+                </div>
+                <div className={VIEWLAYOUTTAG + "-content hero is-fluid"}>
+                    <div className="hero-body">
+                        <p className="content about-list is-size-5">
+                            Nasza oferta obejmuje usługi księgowe dla:
+                            <ul>
                                 <li>osób fizycznych (podatkowa księga przychodów i rozchodów, ryczałt ewidencjonowany, i inne)</li>
                                 <li>spółek z o.o.,</li>
                                 <li>spółek akcyjnych,</li>
@@ -27,12 +35,18 @@ export default function Offer() {
                                 <li>wspólnot mieszkaniowych,</li>
                                 <li>innych podmiotów prowadzących pełną księgowość,</li>
                             </ul>
-                            <h3 className="has-text-white">oraz</h3>
+                        </p>
+                    </div>
+                </div>
+                <div className={VIEWLAYOUTTAG + "-content is-info hero is-fluid"}>
+                    <div className="hero-body">
+                        <p className="content about-list is-size-5">
+                            Zajmujemy się również prowadzeniem:
                             <ul>
                                 <li>Księgi Przychodów i Rozchodów</li>
-                                <li>Księgi Rachunkowe</li>
-                                <li>Obsługa Kadrowo Płacowa</li>
-                                <li>Pełna Obsługa Podatkowa</li>
+                                <li>Księgi Rachunkowej</li>
+                                <li>Obsługi Kadrowo Płacowej</li>
+                                <li>Pełnej Obsługi Podatkowej</li>
                             </ul>
                         </p>
                     </div>

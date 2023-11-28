@@ -1,6 +1,9 @@
+$color-primary-element: #22acf7;
+$color-primary-element-hover: #007fc4a3;
+
 $mobile-width: 480px;
 $tablet-width: 768px;
-$desktop-width: 1024px;
+$desktop-width: 1200px;
 
 @mixin mobile {
   @media (max-width: #{$mobile-width - 1px}) {

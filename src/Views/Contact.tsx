@@ -108,7 +108,7 @@ const Contact = () => {
                 </div>
                 <div className={VIEWLAYOUTTAG + "-subtitle hero is-small is-fluid"}>
                     <div className="hero-body">
-                        <p className="title has-text-white">Skontaktuj się z nami!</p>
+                        <p className="title has-text-info">Skontaktuj się z nami!</p>
                     </div>
                 </div>
                 <div className={VIEWLAYOUTTAG + "-content hero is-info is-fluid"}>
@@ -116,7 +116,7 @@ const Contact = () => {
                         <div className="subtitle">
                             Informacje kontaktowe
                         </div>
-                        <div className="content">
+                        <div className="content is-selectable">
                             <ul>
                                 <li>Adres: ul. Żeromskiego 7/9, 98-220 Zduńska Wola (Wejście od ul. Przejazd)</li>
                                 <li>Telefon: +48 501 668 545</li>

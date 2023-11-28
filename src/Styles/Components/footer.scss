@@ -1,0 +1,34 @@
+.tes-footer {
+    .footer {
+        &-left{
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+        &-right {
+            text-align: right;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: space-between;
+        }
+        &-center {
+            display: flex;
+            text-align: center;
+            align-items: flex-end;
+            justify-content: center;
+        }
+
+        @include mobile {
+            &-left,
+            &-right,
+            &-center {
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}

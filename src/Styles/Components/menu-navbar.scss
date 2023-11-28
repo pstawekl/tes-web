@@ -4,21 +4,79 @@
     top: 0;
     width: 100vw;
     animation: slideFromTop 0.5s ease-in-out;
-    background: linear-gradient(
-        90deg,
-        rgba(227, 240, 240, 1) 0%,
-        #2BAEF7A3 100%
-    );
+    background: linear-gradient(90deg, rgba(227, 240, 240, 1) 0%, #2baef7a3 100%);
+    z-index: 1100;
 
     .navbar-end {
         gap: 40px;
 
         .navbar-item {
             text-transform: capitalize;
-        
-            &:hover{
+
+            &:hover {
                 color: black !important;
             }
+        }
+    }
+
+    @include mobile {
+        .navbar-burger {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .context-menu {
+            display: none;
+    
+            &.is-active {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                position: fixed;
+                top: 52px;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                background: linear-gradient(90deg, rgba(227, 240, 240, 1) 0%, #74ccfc 100%);
+                z-index: 100000;
+                animation: slideFromTop 0.5s ease-in-out;
+                gap: 40px;
+    
+                .navbar-item {
+                    text-transform: capitalize;
+                    font-size: 2rem;
+                    color: white;
+                    transition: 0.5s;
+                    text-transform: uppercase;
+                    border-bottom: 1px solid white;
+    
+                    &:hover {
+                        color: rgb(121, 121, 121) !important;
+                    }
+                }
+            }
+        }
+    }
+
+    @include desktop {
+        .navbar-burger {
+            display: none;
+        }
+        .context-menu {
+            display: none;
+        }
+    }
+
+    @include tablet {
+        .navbar-burger {
+            display: none;
+        }
+        .context-menu {
+            display: none;
         }
     }
 }

@@ -22,21 +22,21 @@ export default function Home() {
             side: "right"
         },
         {
-            title: "Odpowiedni Balans",
-            description: "Nasza firma to odpowiednio wyważony balans między rzetelną pracą, jej szybkością oraz ceną.",
-            image: perfectBalance,
-            side: "left"
-        },
-        {
             title: "Wystarczy Jeden Telefon",
             description: "Wystarczy jeden telefon +48 501 668 545 i już dziś możesz przestać martwić się o własne dokumenty.",
             image: justOneCallAway,
+            side: "left"
+        },
+        {
+            title: "Odpowiedni Balans",
+            description: "Nasza firma to odpowiednio wyważony balans między rzetelną pracą, jej szybkością oraz ceną.",
+            image: perfectBalance,
             side: "right"
-        }
+        },
     ]
 
     return (
-        <div className={TAGNAME + " is-unselectable"}>
+        <div className={TAGNAME}>
             <div className={TAGNAME + "__banner"}>
                 <h1 className="title is-size-1 has-text-info">TES</h1>
                 <p className="subtitle">TWOJE BIURO RACHUNKOWE</p>
@@ -56,7 +56,7 @@ export default function Home() {
             <div className={TAGNAME + "__description container is-fluid py-6"}>
                 {
                     descriptionItems.map((item, index) => {
-                        if (item.side == "left") {
+                        if (item.side === "left") {
                             return (
                                 <div className={TAGNAME + "__description-item-container left"}>
                                     <div className={TAGNAME + "__description-item"} key={index}>

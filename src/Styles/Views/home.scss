@@ -120,6 +120,115 @@
                 }
             }
         }
+
+        @include mobile {
+            img {
+                display: none;
+            }
+
+            &-item {
+                display: flex;
+                flex-direction: column;
+                padding: 20px 0;
+
+                &-container {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+
+                    &:last-child {
+                        .tes-home__description-item-bottom-bar {
+                            height: 0 !important;
+                        }
+                    }
+                }
+
+                &-left {
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 100%;
+                    text-align: center;
+                    padding: 0 !important;
+                }
+
+                &-right {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    width: 100%;
+                    padding: 0 !important;
+                }
+
+                &-bottom-bar {
+                    display: flex;
+                    align-self: center;
+                    justify-content: center;
+                    width: 200px;
+                    height: 1px;
+                    background-color: #2baef7;
+                }
+            }
+        }
+
+        @media (max-width: #{1400px - 1px}) {        
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+
+        @include tablet {
+            img {
+                display: none;
+            }
+
+            &-item {
+                display: flex;
+                flex-direction: column;
+                padding: 20px 0;
+
+                &-container {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+
+                    &:last-child {
+                        .tes-home__description-item-bottom-bar {
+                            height: 0 !important;
+                        }
+                    }
+                }
+
+                &-left {
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 100%;
+                    text-align: center;
+                    padding: 0 !important;
+                }
+
+                &-right {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    width: 100%;
+                    padding: 0 !important;
+                }
+
+                &-bottom-bar {
+                    display: flex;
+                    align-self: center;
+                    justify-content: center;
+                    width: 200px;
+                    height: 1px;
+                    background-color: #2baef7;
+                }
+            }
+        }
     }
 
     &__dialouge {
