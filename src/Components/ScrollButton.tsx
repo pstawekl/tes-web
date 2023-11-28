@@ -1,6 +1,5 @@
-import { faArrowAltCircleUp, faArrowCircleUp } from '@fortawesome/free-solid-svg-icons';
+import { faArrowCircleUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useState } from 'react';
 
 const ScrollButton = () => {
   const toggleVisible = () => {
