@@ -10,13 +10,13 @@ export default function About() {
     const aboutItems: { title: string, subtitle: string, image: string, side: string }[] = [
         {
             title: "Ponad 20 Lat Doświadczenia w Branży Księgowej",
-            subtitle: "Witamy w naszym biurze rachunkowym, sercu finansowej precyzji w Zduńskiej Woli. Od ponad dwóch dekad jesteśmy zaufanym partnerem dla lokalnych przedsiębiorstw i indywidualnych klientów, dostarczając usługi pełnej księgowości na najwyższym poziomie.",
+            subtitle: "Witamy w naszym biurze rachunkowym, sercu finansowej precyzji w Zduńskiej Woli. Od ponad dwóch dekad jesteśmy zaufanym partnerem dla przedsiębiorstw z całej Polski i indywidualnych klientów, dostarczając usługi księgowe na najwyższym poziomie.",
             image: over20years,
             side: "left"
         },
         {
             title: "Zespół Ekspertów",
-            subtitle: "Nasze biuro z dumą wspiera pięciu wykwalifikowanych księgowych, każdy z bogatym doświadczeniem i specjalistyczną wiedzą. Nasz zespół to nie tylko eksperci w swojej dziedzinie, ale także ludzie z pasją, którzy nieustannie podnoszą swoje kwalifikacje, aby świadczyć usługi na najwyższym poziomie.",
+            subtitle: "Nasze biuro z dumą wspiera kilku wykwalifikowanych księgowych, każdy z bogatym doświadczeniem i specjalistyczną wiedzą. Nasz zespół to nie tylko eksperci w swojej dziedzinie, ale także ludzie z pasją, którzy nieustannie podnoszą swoje kwalifikacje, aby świadczyć usługi na najwyższym poziomie.",
             image: experts,
             side: "right"
         },
@@ -28,7 +28,7 @@ export default function About() {
         },
         {
             title: "Nasze Usługi",
-            subtitle: "Oferujemy kompleksową obsługę księgową, w tym prowadzenie ksiąg rachunkowych, doradztwo podatkowe, rozliczenia z ZUS, obsługę kadrowo-płacową oraz pomoc w zakresie audytu i kontrolingu finansowego.",
+            subtitle: "Oferujemy kompleksową obsługę księgową, w tym prowadzenie ksiąg rachunkowych, KPiR, ryczałtu ewidencjonowanego, rozliczenia z ZUS, obsługę kadrowo-płacową oraz pomoc w zakresie audytu i kontrolingu finansowego.",
             image: ourServices,
             side: "right"
         },

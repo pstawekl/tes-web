@@ -122,9 +122,9 @@ const Contact = () => {
                         </div>
                         <div className="content is-selectable">
                             <ul>
-                                <li>Adres: ul. Żeromskiego 7/9, 98-220 Zduńska Wola (Wejście od ul. Przejazd)</li>
                                 <li>Telefon: +48 501 668 545</li>
                                 <li>E-mail: rachunkowe@r-biuro.pl</li>
+                                <li>Adres: ul.  Stefana Żeromskiego 7/9, 98-220 Zduńska Wola (Wejście od ul. Przejazd)</li>
                             </ul>
                         </div>
                     </div>

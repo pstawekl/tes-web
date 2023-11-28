@@ -96,8 +96,9 @@ export default function Home() {
                         Nasze biuro rachunkowe jest podmiotem wyspecjalizowanym
                     </p>
                     <p className="subtitle is-size-4">
-                        Prowadzimy podatkowe księgi przychodów i rozchodów (KPiR) oraz pełne księgi rachunkowe.
-                        Obsługujemy firmy z terenu Zduńskiej Woli i okolic. Na życzenie Klienta odbieramy dokumenty z jego siedziby.
+                        Prowadzimy podatkowe księgi przychodów i rozchodów (KPiR), ryczałt ewidencjonowany oraz pełne księgi rachunkowe. 
+                        Obsługujemy firmy z całej Polski. Na życzenie Klienta odbieramy dokumenty z jego siedziby na terenie Zduńskiej Woli i okolic. <br />
+                        Dzięki nowym technologiom pracujemy również zdalnie.
                     </p>
                 </div>
             </div>

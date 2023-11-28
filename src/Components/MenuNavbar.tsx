@@ -1,7 +1,7 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { useEffect, useState } from "react"
-import { faEmpire, faFacebook, faFacebookF } from "@fortawesome/free-brands-svg-icons";
-import { faBars, faClose, faEnvelope, faHamburger, faPhone } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useEffect, useState } from "react";
+import { faBars, faClose } from '@fortawesome/free-solid-svg-icons';
+import Logo from '../Images/logo.png';
 
 export default function MenuNavbar() {
     const [isContextOpen, setIsContextOpen] = useState(false)
@@ -40,7 +40,7 @@ export default function MenuNavbar() {
         <nav className="navbar" role="navigation" aria-label="main navigation">
             <div className="navbar-brand">
                 <a className="navbar-item has-text-info is-size-4 has-text-weight-bold" href="/">
-                    TES
+                    <img src={Logo} alt="TES" />
                 </a>
 
                 <div role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" onClick={e => setIsContextOpen(!isContextOpen)}>

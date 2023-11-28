@@ -1,4 +1,4 @@
-import { faEmpire, faFacebook, faFacebookF } from "@fortawesome/free-brands-svg-icons";
+import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -9,7 +9,7 @@ export default function Footer() {
             <div className="content columns">
                 <div className="footer-left column">
                     <p>
-                        Adres: ul. Żeromskiego 7/9, <br />
+                        Adres: ul. Stefana Żeromskiego 7/9, <br />
                         98-220 Zduńska Wola <br />
                         (Wejście od ul. Przejazd)
                     </p>

@@ -41,12 +41,12 @@ export default function Offer() {
                 <div className={VIEWLAYOUTTAG + "-content is-info hero is-fluid"}>
                     <div className="hero-body">
                         <p className="content about-list is-size-5">
-                            Zajmujemy się również prowadzeniem:
+                            Zajmujemy się prowadzeniem:
                             <ul>
                                 <li>Księgi Przychodów i Rozchodów</li>
-                                <li>Księgi Rachunkowej</li>
+                                <li>Ryczałtu ewidencjonowanego</li>
+                                <li>Ksiąg Rachunkowych</li>
                                 <li>Obsługi Kadrowo Płacowej</li>
-                                <li>Pełnej Obsługi Podatkowej</li>
                             </ul>
                         </p>
                     </div>

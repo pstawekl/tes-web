@@ -99,8 +99,8 @@ export default function Certificates() {
                 <div className={VIEWLAYOUTTAG + "-content hero is-info is-fluid"}>
                     <div className="hero-body">
                         <div className="content is-size-5">
-                            Nasze biuro posiada wiele ukończonych certyfikatow, kursów oraz seminariów, które uprawniają nas do usługowego prowadzenia ksiąg rachunkowych, prowadzenia rachunkowości oraz do wykonywania czynności biegłego rewidenta.
-                            Umożliwiają one również profesjonalną pracę w ogólnym obszarze rachunkowości i finansów, zgodnie z obowiązującymi przepisami RODO oraz prowadzenie ksiąg rachunkowych fundacji i stowarzyszeń.
+                            Nasze biuro posiada wiele ukończonych certyfikatow, kursów oraz seminariów, które uprawniają nas do usługowego prowadzenia ksiąg rachunkowych.
+                            Umożliwiają one również profesjonalną pracę w ogólnym obszarze rachunkowości i finansów, zgodnie z obowiązującymi przepisami. Zdobyta wiedza umożliwia nam prowadzenie ksiąg rachunkowych fundacji i stowarzyszeń.
                             Posiadamy również podstawową wiedzę na temat regulacji zawartych w ustawie o PPK (pracowniczych planach kapitałowych).
                         </div>
                     </div>
