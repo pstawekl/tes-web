@@ -38,8 +38,12 @@ export default function Gallery(props: GalleryProps) {
     const captionsRef = React.useRef(null);
 
     const closeLightbox = () => {
+        const scrolled = document.documentElement.scrollTop;
         setCurrentImage(0);
         setViewerIsOpen(false);
+        if (scrolled > 200) {
+            document.getElementsByClassName('scroll-button-icon')[0]?.classList.add('slide-in');
+        }
     };
 
     useEffect(() => {
@@ -48,15 +52,23 @@ export default function Gallery(props: GalleryProps) {
         }
     }, [currentImage])
 
+    function openLightbox(canOpen: boolean): boolean {
+        if (canOpen)
+            document.getElementsByClassName('scroll-button-icon')[0]?.classList.remove('slide-in');
+
+        return canOpen;
+    }
+
     return (
         <div>
-            <div className="gallery" style={{display: 'flex'}}>
+            <div className="gallery" style={{ display: 'flex' }}>
                 {
                     props.galleryImages.map((image, index) => {
                         return (
                             <div className="column is-4" onClick={e => {
                                 e.preventDefault();
-                                setCurrentImage(image.index);}}>
+                                setCurrentImage(image.index);
+                            }}>
                                 <div className="card">
                                     <div className="card-image">
                                         <figure className="image">
@@ -73,19 +85,19 @@ export default function Gallery(props: GalleryProps) {
                 props.galleryImages.map((image, index) => {
                     return (
                         <Lightbox
-                        open={Boolean(image.index === currentImage && viewerIsOpen)}
-                        close={() => closeLightbox()}
-                        plugins={[Captions]}
-                        slides={[{
-                            src: image.src,
-                            title:image.name,
-                            description: image.description
-                        }]}
-                        captions={{ref: captionsRef}}
-                        noScroll={{disabled: true}}
+                            open={openLightbox(Boolean(image.index === currentImage && viewerIsOpen))} //Boolean(image.index === currentImage && viewerIsOpen)
+                            close={() => closeLightbox()}
+                            plugins={[Captions]}
+                            slides={[{
+                                src: image.src,
+                                title: image.name,
+                                description: image.description
+                            }]}
+                            captions={{ ref: captionsRef }}
+                            noScroll={{ disabled: true }}
                         />
                     )
-                }) 
+                })
             }
         </div>
     );
