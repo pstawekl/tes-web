@@ -37,6 +37,10 @@ const Contact = () => {
 
     function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault()
+        const submitButton = document.getElementsByClassName('tes-submit-button')[0];
+        submitButton.setAttribute('disabled', 'true');
+        showAlert("Wysyłanie...", "Proszę czekać...", "is-warning", true);
+        
 
         if (name === '') {
             showAlert("Błąd!", "Uzupełnij imię!", "is-danger", true)
@@ -137,7 +141,7 @@ const Contact = () => {
                             </div>
                         </article>
                         {
-                            !isSubmited && <form className="py-5" ref={form as React.LegacyRef<HTMLFormElement>} onSubmit={e => {document.getElementsByClassName('tes-submit-button')[0].classList.add('in-progress'); handleSubmit(e);}}>
+                            !isSubmited && <form className="py-5" ref={form as React.LegacyRef<HTMLFormElement>} onSubmit={e => {handleSubmit(e);}}>
                             <div className="subtitle">Napisz do nas</div>
                             <div>
                                 <input className="input form-name" type="text" id="name" name="name"
